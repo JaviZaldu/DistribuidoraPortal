@@ -2,6 +2,8 @@ const nodemailer = require("nodemailer");
 
 const sendEmail = async (req, res) => {
   const { subject, name, lastName, email, message } = req.body;
+  const password = process.env.PASSWORD;
+  const correo = process.env.MAIL;
 
   try {
     if (!subject || !name || !lastName || !email || !message) {
@@ -10,8 +12,8 @@ const sendEmail = async (req, res) => {
       const transporter = nodemailer.createTransport({
         service: "Gmail",
         auth: {
-          user: "distribuidoraportal.mkt@gmail.com", // Tu dirección de correo electrónico
-          pass: "jlarcqhyolyxonvb", // Tu contraseña
+          user: correo, // Tu dirección de correo electrónico
+          pass: password, // Tu contraseña
         },
       });
       const mailOptions = {
@@ -28,7 +30,7 @@ const sendEmail = async (req, res) => {
 
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-          return res.status(400).send("Error al enviar correo");
+          return res.status(400).send(error.message);
         } else {
           return res.status(200).send("Correo enviado");
         }
