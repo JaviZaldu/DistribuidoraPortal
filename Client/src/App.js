@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 
-// import Navbar from "./Components/NavBar/NavBar";
+import Navbar from "./Components/NavBar/NavBar";
 // import Sidebar from "./Components/SideBar/SideBar";
 // import Inicio from "./Components/Inicio/Inicio";
 // import RightSideBar from "./Components/RightSideBar/RightSideBar";
@@ -12,9 +12,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="AppContainer">
-      {/* <Navbar/>
-      <Inicio/>
+    <div className="App">
+      <Navbar/>
+      {/* <Inicio/>
       <Sidebar/>
       <RightSideBar/>
       <AboutMe/>
