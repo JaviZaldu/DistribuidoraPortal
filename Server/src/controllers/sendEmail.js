@@ -1,24 +1,24 @@
 const nodemailer = require("nodemailer");
 
 const sendEmail = async (req, res) => {
-  const { name, lastName, email, message } = req.body;
+  const { subject, name, lastName, email, message } = req.body;
 
   try {
-    if (!name || !lastName || !email || !message) {
+    if (!subject || !name || !lastName || !email || !message) {
       return res.status(500).send("Ingrese todos los datos");
     } else {
       const transporter = nodemailer.createTransport({
         service: "Gmail",
         auth: {
-          user: "andresriera9999@gmail.com", // Tu dirección de correo electrónico
-          pass: "vknjtroaszthesmy", // Tu contraseña
+          user: "distribuidoraportal.mkt@gmail.com", // Tu dirección de correo electrónico
+          pass: "jlarcqhyolyxonvb", // Tu contraseña
         },
       });
       const mailOptions = {
-        from: "andresriera9999@gmail.com", // Remitente
-        to: "andresriera9999@gmail.com", // Destinatario
-        subject: "Nuevo contacto desde portfolio", // Asunto
-        text: `
+        from: "distribuidoraportal.mkt@gmail.com", // Remitente
+        to: "distribuidoraportal.mkt@gmail.com", // Destinatario
+        subject: `Contacto desde Web: ${subject}`, // Asunto
+        text: `            
                     Nombre: ${name}
                     Apellido: ${lastName}
                     Email: ${email}
