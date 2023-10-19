@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,13 +14,14 @@ function Inicio() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 2000,
     autoplay: true,
     autoplaySpeed: 4000,
     fade: true,
     swipe: false,
+    arrows: false,
     beforeChange: (current, next) => setCurrentSlide(next),
   };
 
