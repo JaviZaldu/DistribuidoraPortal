@@ -3,7 +3,7 @@
     color: #000000; 
     display: flex;
     align-items: center;
-    padding: 10px 10px;
+    padding: 10px 0px;
     width: 100vw;
     transition: background-color 0.3s ease-in-out;
     position: fixed;
@@ -19,7 +19,7 @@
   }
 
   .logo {
-    margin-left: 5%;
+    padding-left: 5%;
   }
   
   .sections{

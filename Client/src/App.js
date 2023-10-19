@@ -3,7 +3,7 @@ import './App.css';
 
 import Navbar from "./Components/NavBar/NavBar";
 // import Sidebar from "./Components/SideBar/SideBar";
-// import Inicio from "./Components/Inicio/Inicio";
+import Inicio from "./Components/Inicio/Inicio";
 // import RightSideBar from "./Components/RightSideBar/RightSideBar";
 // import AboutMe from "./Components/AboutMe/AboutMe";
 // import Projects from "./Components/Projects/Projects";
@@ -14,8 +14,8 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      {/* <Inicio/>
-      <Sidebar/>
+      <Inicio/>
+      {/* <Sidebar/>
       <RightSideBar/>
       <AboutMe/>
       <Projects/>

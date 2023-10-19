@@ -1,0 +1,14 @@
+.container {
+  align-items: center;
+  width: 100vw;
+}
+
+.flyerImage {
+    display: block;
+    padding-top: 20%;
+    margin: 0 auto;
+    max-width: 100vw;
+    height: auto;
+    width: 1000px;
+    max-height: 400px;
+  }
