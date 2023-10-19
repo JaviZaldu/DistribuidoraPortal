@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 import Navbar from "./Components/NavBar/NavBar";
-// import Inicio from "./Components/Inicio/Inicio";
+import Inicio from "./Components/Inicio/Inicio";
 import Nosotros from "./Components/Nosotros/Nosotros";
 // import Projects from "./Components/Projects/Projects";
 // import Contacto from "./Components/Contact/Contact";
@@ -12,11 +12,9 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Inicio/>
       <Nosotros />
-      {/* <Inicio/>
-      <Sidebar/>
-      <RightSideBar/>
-      <Projects/>
+    {/*<Projects/>
       <Contacto/>
       <Footer/> */}
     </div>
