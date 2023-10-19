@@ -1,11 +1,9 @@
 import React from "react";
-import './App.css';
+import "./App.css";
 
 import Navbar from "./Components/NavBar/NavBar";
-// import Sidebar from "./Components/SideBar/SideBar";
 import Inicio from "./Components/Inicio/Inicio";
-// import RightSideBar from "./Components/RightSideBar/RightSideBar";
-// import AboutMe from "./Components/AboutMe/AboutMe";
+import Nosotros from "./Components/Nosotros/Nosotros";
 // import Projects from "./Components/Projects/Projects";
 // import Contacto from "./Components/Contact/Contact";
 // import Footer from "./Components/Footer/Footer";
@@ -13,12 +11,10 @@ import Inicio from "./Components/Inicio/Inicio";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar />
       <Inicio/>
-      {/* <Sidebar/>
-      <RightSideBar/>
-      <AboutMe/>
-      <Projects/>
+      <Nosotros />
+    {/*<Projects/>
       <Contacto/>
       <Footer/> */}
     </div>
