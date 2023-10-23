@@ -1,9 +1,10 @@
 import Styles from "./Nosotros.module.css"
+import Empleados1 from "../../Assets/Empleados/empleados1.webp"
 function Nosotros() {
   return (
     <div className={Styles.Container} id="Nosotros">
         <div className={Styles.nuestroPersonal}>
-            <img src="https://www.infobae.com/new-resizer/83j3hdmugCzo7SbdSW7sRYyQx50=/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/M2QIF5KCOFCJXHR7GUJUL35QEA.jpg" alt="" className={Styles.img}></img>
+            <img src={Empleados1} alt="" className={Styles.img}></img>
             <div style={{marginTop:"-30px"}}>
                 <p className={Styles.titulo}>NUESTRO PERSONAL</p>
                 <p className={Styles.texto}>Sencillez, humildad, honestidad y pasión son los valores que guían nuestra empresa. Nuestro pilar es la sostenibilidad en las relaciones laborales con nuestros recursos humanos, clientes y proveedores.</p>
