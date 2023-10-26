@@ -6,7 +6,7 @@ import Inicio from "./Components/Inicio/Inicio";
 import Nosotros from "./Components/Nosotros/Nosotros";
 import Sucursales from "./Components/Sucursales/Sucursales";
 // import Contacto from "./Components/Contact/Contact";
-// import Footer from "./Components/Footer/Footer";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
       <Inicio />
       <Nosotros />
       <Sucursales />
-      {/*  <Contacto/>
-      <Footer/> */}
+      {/*  <Contacto/>*/}
+      <Footer />
     </div>
   );
 }
