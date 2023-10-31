@@ -1,0 +1,112 @@
+.container{
+    padding-left:15% ;
+    padding-right: 15%;
+    padding-bottom: 5%;
+    text-align: left;
+}
+
+.title{
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: left;
+}
+
+.guia{
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.emailMensaje{
+    display: flex;
+    flex-direction: column;
+}
+
+.emailMensaje textarea{
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.select{
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 18px;
+    
+}
+
+.namesContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.names{
+    width: 40%;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.email{
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.mensaje{
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    min-height: 100px;
+    max-height: 400px;
+}
+.error{
+    color: rgb(208, 211, 21);
+    padding-left: 10px;
+    text-align: left;
+  }
+  .button {
+    margin-top: 15px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #DC0B15;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #DC0B15;
+    
+  }
+  
+  .button:hover {
+    color: #204796;
+    transform: scale(1.1);
+    outline: 2px solid #FFFC05;
+    box-shadow: 4px 5px 17px -4px #FFFC05;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #FFFC05;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  .button:hover::before {
+    width: 250%;
+  }
+  
+  

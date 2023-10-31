@@ -5,7 +5,7 @@ import Navbar from "./Components/NavBar/NavBar";
 import Inicio from "./Components/Inicio/Inicio";
 import Nosotros from "./Components/Nosotros/Nosotros";
 import Sucursales from "./Components/Sucursales/Sucursales";
-// import Contacto from "./Components/Contact/Contact";
+import Contacto from "./Components/Contacto/Contacto";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Inicio />
       <Nosotros />
       <Sucursales />
-      {/*  <Contacto/>*/}
+      <Contacto />
       <Footer />
     </div>
   );
