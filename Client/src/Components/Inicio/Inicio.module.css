@@ -7,8 +7,8 @@
     padding-top: 15%;
     display: block;
     width: 80%;
-    max-width: 1000px;
-    max-height: 400px;
+    max-width: 1100px;
+    max-height: 440px;
     height: auto;
     margin: 0 auto;
     border: none;
@@ -22,6 +22,7 @@
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+    justify-content: space-between;
   }
 
   .QHacemosTexto {
@@ -42,7 +43,7 @@
   }
 
   .slider2{
-    width: 50%;
+    width: 40%;
     align-items: center;
     justify-content: center;
   }
@@ -91,6 +92,44 @@
     max-width: 450px;
   }
 
+  .marcasContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    height: auto;
+    border: 10px solid #FFFC05;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+    background-color:#FFFC05 ;
+    padding-top: 3px;
+  }
+  
+  .swiper {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .marcasImage {
+    width: 100%;
+    max-height: 300px;
+    height: auto;
+  }
+
+  .videoContainer {
+    width: 60%; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5%;
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   @media (max-width: 1500px) {
     .flyerImage {
@@ -117,7 +156,6 @@
     }
   
     .ParqueExterior {
-      width: 350px;
       height: 350px;
     }
 
@@ -166,7 +204,6 @@
     }
   
     .ParqueExterior {
-      width: 300px;
       height: 300px;
     }
 
@@ -194,11 +231,8 @@
     .flyerImage {
       padding-top: 22%;
     }
-    .QHacemosContainer {
-      width: 80%;
-      display: flex;
-      flex-direction: row;
-      margin: 0 auto;
+    .QHacemosTexto h2 {
+      font-size: 28px;
     }
   }
 
@@ -229,7 +263,10 @@
     }
   
     .slider2 {
-      display: none;
+      margin-top: 25px;
+      width: 90%;
+      align-items: center;
+      justify-content: center;
     }
     
     .RyOContainer {
@@ -269,11 +306,39 @@
     .flyerImage {
       padding-top: 35%;
     }
+
+    .videoContainer {
+      width: 70%; 
+      padding: 15px;
+    }
   }
 
   @media (max-width: 600px) {
     .flyerImage {
       padding-top: 40%;
+    }
+
+    .slider2 {
+      margin-top: 25px;
+      width: 90%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ParqueExterior {
+      height: 230px;
+    }
+
+    .QHacemosTexto h2 {
+      font-size: 25px;
+    }
+    .QHacemosTexto p {
+      font-size: 20px;
+    }
+
+    .marcasContainer {
+      border: 8px solid #FFFC05;
+      margin-bottom: 45px;
     }
   }
 
@@ -281,6 +346,25 @@
     .flyerImage {
       padding-top: 50%;
     }
+
+    .slider2 {
+      margin-top: 25px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ParqueExterior {
+      height: 220px;
+    }
+
+    .QHacemosTexto h2 {
+      font-size: 20px;
+    }
+    .QHacemosTexto p {
+      font-size: 17px;
+    }
+
     .RyOContainer {
       padding-left: 10%;
       padding-right: 10%;
@@ -313,10 +397,32 @@
     .botonOfertas{
       max-width: 200px;
     }
+
+    .marcasContainer {
+      border: 7px solid #FFFC05;
+      margin-bottom: 40px;
+    }
+
+    .videoContainer {
+      width: 70%; 
+      padding: 10px;
+    }
   }
 
   @media (max-width: 350px) {
     .flyerImage {
       padding-top: 60%;
+    }
+
+    .QHacemosTexto h2 {
+      font-size: 18px;
+    }
+    .QHacemosTexto p {
+      font-size: 15px;
+    }
+
+    .videoContainer {
+      width: 70%; 
+      padding: 5px;
     }
   }
