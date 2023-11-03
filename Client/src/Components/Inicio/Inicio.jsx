@@ -16,70 +16,43 @@ import fotoRedes from '../../Assets/FotosEmpresa/fotoRedes.webp';
 import botonOfertas from '../../Assets/FotosEmpresa/botonOfertas.png';
 import botonRedes from '../../Assets/FotosEmpresa/botonRedes.png';
 
+import marcas1 from '../../Assets/Marcas/marcas1.webp';
+import marcas2 from '../../Assets/Marcas/marcas2.webp';
+import marcas3 from '../../Assets/Marcas/marcas3.webp';
+import marcas4 from '../../Assets/Marcas/marcas4.webp';
+
+import VideoPortal from '../../Assets/VideoPortal.mp4';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import { Autoplay,EffectFade } from 'swiper/modules';
+
 
 function Inicio() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 2000,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    fade: true,
-    swipe: false,
-    arrows: false,
-    beforeChange: (current, next) => setCurrentSlide(next),
-  };
-  const settings2 = {
-    infinite: true,
-    speed: 2000,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    fade: true,
-    swipe: false,
-    arrows: false,
-    centerMode: true,
-    beforeChange: (current, next) => setCurrentSlide(next),
-  };
 
   return (
     <div id="inicio" className={styles.container} >
       <div className={styles.flyerContainer}>
-        <Slider {...settings}>
-          <div>
-            <img src={flyer1} alt="Flyer 1" className={styles.flyerImage} />
-          </div>
-          <div>
-            <img src={flyer2} alt="Flyer 2" className={styles.flyerImage} />
-          </div>
-          <div>
-            <img src={flyer3} alt="Flyer 3" className={styles.flyerImage} />
-          </div>
-          <div>
-            <img src={flyer4} alt="Flyer 4" className={styles.flyerImage} />
-          </div>
-        </Slider>
+        <Swiper effect={'fade'} autoplay={{ delay: 2500, disableOnInteraction: false,  }} modules={[Autoplay,EffectFade]}>
+          <SwiperSlide><img src={flyer1} alt="Flyer 1" className={styles.flyerImage} /></SwiperSlide>
+          <SwiperSlide><img src={flyer2} alt="Flyer 2" className={styles.flyerImage} /></SwiperSlide>
+          <SwiperSlide><img src={flyer3} alt="Flyer 3" className={styles.flyerImage} /></SwiperSlide>
+          <SwiperSlide><img src={flyer4} alt="Flyer 4" className={styles.flyerImage} /></SwiperSlide>
+        </Swiper>
       </div>
+
       <div className={styles.QHacemosContainer}>
-
-          <div className={styles.QHacemosTexto}>
-            <h2>¡Siempre el mejor precio!</h2>
-            <p>Venta y Distribución al por menor y por mayor de Pañales, 
-              Papeles, artículos y materiales de limpieza y afines, artículos de cosmética, tocador, perfumería y afines, productos alimenticios, 
-              comestibles y bebidas en general.</p>
-          </div>
-
-          <div className={styles.slider2}>
-            <Slider {...settings2}>
-              <div>
-                <img src={ParqueExterior1} alt="ParqueExterior 1" className={styles.ParqueExterior} />
-              </div>
-              <div>
-                <img src={ParqueExterior2} alt="ParqueExterior 2" className={styles.ParqueExterior} />
-              </div>
-            </Slider>
-           </div>
+        <div className={styles.QHacemosTexto}>
+          <h2>¡Siempre el mejor precio!</h2>
+          <p>Venta y Distribución al por menor y por mayor de Pañales, Papeles, artículos y materiales de limpieza y afines, artículos de cosmética, tocador, perfumería y afines, productos alimenticios, comestibles y bebidas en general.</p>
+        </div>
+        <div className={styles.slider2}>
+          <Swiper effect={'fade'} autoplay={{ delay: 2500, disableOnInteraction: false,  }} modules={[Autoplay,EffectFade]}>
+              <SwiperSlide><img src={ParqueExterior1} alt="ParqueExterior 1" className={styles.ParqueExterior} /></SwiperSlide>
+              <SwiperSlide><img src={ParqueExterior2} alt="ParqueExterior 2" className={styles.ParqueExterior} /></SwiperSlide>
+          </Swiper>
+        </div>
       </div>
 
       <div className={styles.RyOContainer}>
@@ -91,11 +64,28 @@ function Inicio() {
         </div>
         <div className={styles.ofertasContainer}>
           <img src={fotoOfertas} alt="fotoOfertas" className={styles.fotoOfertas} />
-          <a href="https://drive.google.com/drive/folders/1JtqeghtQKtKru50huRBvgKFOOk1-Ma2-?usp=sharing" target="_blank" rel="noreferrer">
+          <a href="https://drive.google.com/drive/folders/15FmZOUOCZLtRgIiQRnTOeAtDHQkwSffH?usp=sharing" target="_blank" rel="noreferrer">
             <img src={botonOfertas} alt="botonOfertas" className={styles.botonOfertas} />
           </a>
         </div>
       </div>
+
+      <div className={styles.marcasContainer}>
+        <Swiper effect={'fade'} autoplay={{ delay: 2500, disableOnInteraction: false,  }} modules={[Autoplay,EffectFade]}>
+          <SwiperSlide><img src={marcas1} alt="marcas 1" className={styles.marcasImage}/></SwiperSlide>
+          <SwiperSlide><img src={marcas2} alt="marcas 2" className={styles.marcasImage}/></SwiperSlide>
+          <SwiperSlide><img src={marcas3} alt="marcas 3" className={styles.marcasImage}/></SwiperSlide>
+          <SwiperSlide><img src={marcas4} alt="marcas 4" className={styles.marcasImage}/></SwiperSlide>
+        </Swiper>
+      </div>
+
+      <div className={styles.videoContainer}>
+        <video controls className={styles.video}>
+          <source src={VideoPortal} type="video/mp4" />
+          Tu navegador no admite el elemento de video.
+        </video>
+      </div>
+      
     </div>
   );
 }

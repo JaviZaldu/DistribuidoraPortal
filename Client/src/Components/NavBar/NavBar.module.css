@@ -3,7 +3,6 @@
     color: #000000; 
     display: flex;
     align-items: center;
-    padding: 10px 0px;
     width: 100vw;
     transition: background-color 0.3s ease-in-out;
     position: fixed;
@@ -11,7 +10,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    height: 130px;
+    height: 120px;
   }
   
   .fixedNavbar {
