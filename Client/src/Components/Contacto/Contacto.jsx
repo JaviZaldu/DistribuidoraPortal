@@ -55,7 +55,7 @@ function Contacto() {
     
   }
   return (
-    <div className={style.container}>
+    <div className={style.container} id="contacto">
       <p className={style.title}>CONTACTO</p>
       <p className={style.guia}>|| Envia tu consulta o accede al formulario para trabajar con nosotros</p>
       <form>

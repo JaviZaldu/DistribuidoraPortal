@@ -16,7 +16,7 @@ import { Autoplay,EffectFade } from 'swiper/modules';
 function Nosotros() {
 
   return (
-    <div className={Styles.Container} id="Nosotros">
+    <div className={Styles.Container} id="nosotros">
         <div className={Styles.nuestroPersonal}>
             <div style={{marginTop:"-30px"}}>
                 <p className={Styles.titulo}>NUESTRO PERSONAL</p>

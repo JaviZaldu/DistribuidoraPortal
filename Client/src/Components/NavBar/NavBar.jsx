@@ -20,7 +20,7 @@ function Navbar() {
       const destino = document.getElementById("nosotros")
         if(destino){
           await controls.start({y:destino.offsetTop})
-          window.scrollTo({top: destino.offsetTop - 60, behavior: 'smooth'})
+          window.scrollTo({top: destino.offsetTop - 150, behavior: 'smooth'})
         }
       }
 
