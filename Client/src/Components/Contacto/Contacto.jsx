@@ -55,7 +55,8 @@ function Contacto() {
     
   }
   return (
-    <div className={style.container}>
+
+    <div className={style.container} id="contacto">
 
       <div className={style.MotivoContainer}>
           <h3 className={style.title}>CONTÁCTENOS</h3>
@@ -70,7 +71,6 @@ function Contacto() {
       <form className={style.Formulario} >
         {showButton ? 
         <div>
-          
           <button className={style.button2}>COMPLETA NUESTRO FORMULARIO</button>
         </div> 
         
