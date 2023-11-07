@@ -57,13 +57,17 @@ function Inicio() {
 
       <div className={styles.RyOContainer}>
         <div className={styles.redesContainer}>
-          <img src={fotoRedes} alt="fotoRedes" className={styles.fotoRedes} />
+          <a href="https://www.instagram.com/portal.distribuidorasrl/" target="_blank" rel="noreferrer">
+            <img src={fotoRedes} alt="fotoRedes" className={styles.fotoRedes} />
+          </a>
           <a href="https://www.instagram.com/portal.distribuidorasrl/" target="_blank" rel="noreferrer">
             <img src={botonRedes} alt="botonRedes" className={styles.botonRedes} />
           </a>
         </div>
         <div className={styles.ofertasContainer}>
-          <img src={fotoOfertas} alt="fotoOfertas" className={styles.fotoOfertas} />
+          <a href="https://drive.google.com/drive/folders/15FmZOUOCZLtRgIiQRnTOeAtDHQkwSffH?usp=sharing" target="_blank" rel="noreferrer">
+            <img src={fotoOfertas} alt="fotoOfertas" className={styles.fotoOfertas} />
+          </a>
           <a href="https://drive.google.com/drive/folders/15FmZOUOCZLtRgIiQRnTOeAtDHQkwSffH?usp=sharing" target="_blank" rel="noreferrer">
             <img src={botonOfertas} alt="botonOfertas" className={styles.botonOfertas} />
           </a>

@@ -59,7 +59,7 @@ function Navbar() {
 
   return (
     <div className={`${styles.navbar} ${navbarFixed ? styles.fixedNavbar : ''}`}>
-      <img className={styles.logo} src={LogoHorizontal} alt="logo" />
+      <a href="/"><img className={styles.logo} src={LogoHorizontal} alt="logo" /></a>
       <div className={styles.sections}>
         <ul>
             <li onClick={scrollToInicio}>Inicio</li>
