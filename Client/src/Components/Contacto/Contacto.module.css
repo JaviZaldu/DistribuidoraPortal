@@ -1,12 +1,18 @@
 .container{
-    padding-left:15% ;
-    padding-right: 15%;
-    padding-bottom: 5%;
+    background-color: #e1ebff;
+    width: 70%;
+    margin: 0 auto;
     text-align: left;
+    margin-bottom: 5%;
+    border-radius: 20px;
+}
+
+.MotivoContainer{
+    padding: 10px 30px;
 }
 
 .title{
-    color: #FFFFFF;
+    color: rgb(0, 0, 0);
     font-weight: 700;
     font-size: 30px;
     text-align: left;
@@ -14,82 +20,106 @@
 
 .guia{
     font-size: 18px;
-    color: #FFFFFF;
-}
-.emailMensaje{
-    display: flex;
-    flex-direction: column;
-}
-
-.emailMensaje textarea{
-    min-width: 100%;
-    max-width: 100%;
+    font-weight: 500;
+    color: #000000;
 }
 
 .select{
     padding: 7px;
-    border-radius: 5px;
-    font-size: 18px;
-    
+    font-size: 17px;
+    border: 1px solid rgba(0, 0, 0, 0.2);  
+    background-color: transparent; 
+}
+.select:focus {
+    outline: none;
+  }
+
+.Formulario{
+    padding: 30px;
+}
+
+.InputsFormulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .namesContainer{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
+    gap: 20px;
 }
 .names{
-    width: 40%;
+    width: 90%;
     padding: 7px;
-    border-radius: 5px;
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: transparent;
 }
 
-.email{
+.emailMensaje{
     width: 100%;
+    height: 100%;
+}
+
+.emailMensaje textarea{
     padding: 7px;
-    border-radius: 5px;
-    font-size: 18px;
-    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    width: 98%;
+    height: 90%;
+    resize: none;
 }
 
 .mensaje{
-    width: 100%;
-    padding: 7px;
-    border-radius: 5px;
     font-size: 18px;
-    margin-top: 10px;
-    min-height: 100px;
-    max-height: 400px;
 }
+
+.names:focus,
+.mensaje:focus {
+    outline: none;
+}
+
+.names::placeholder,
+.mensaje::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  font-style: normal;
+}
+
+.names:focus::placeholder,
+.mensaje:focus::placeholder {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+}
+
 .error{
-    color: rgb(208, 211, 21);
-    padding-left: 10px;
+    color: #DC0B15;
     text-align: left;
   }
+  
   .button {
-    margin-top: 15px;
-    padding: 10px 10px;
+    width: 50%;
+    margin-top: 5%;
+    padding: 15px 10px;
     border: none;
-    border-radius: 5px;
     font-weight: bold;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: #DC0B15;
+    color: #204796;
     transition: all 1000ms;
     font-size: 15px;
     position: relative;
     overflow: hidden;
-    outline: 2px solid #DC0B15;
-    
+    outline: 1px solid #204796;
+    background-color: transparent;
   }
   
   .button:hover {
     color: #204796;
-    transform: scale(1.1);
+    transform: scale(1.08);
     outline: 2px solid #FFFC05;
-    box-shadow: 4px 5px 17px -4px #FFFC05;
+    box-shadow: 4px 5px 17px -4px #204796;
   }
   
   .button::before {
@@ -108,5 +138,149 @@
   .button:hover::before {
     width: 250%;
   }
+
+  .button2 {
+    width: 50%;
+    margin-top: 5%;
+    padding: 15px 10px;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #204796;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 1px solid #204796;
+    background-color: transparent;
+  }
   
+  .button2:hover {
+    color: #204796;
+    transform: scale(1.08);
+    outline: 2px solid #FFFC05;
+    box-shadow: 4px 5px 17px -4px #204796;
+  }
   
+  .button2::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #FFFC05;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  .button2:hover::before {
+    width: 250%;
+  }
+  
+  @media (max-width: 1300px) {
+  .button2 {
+    width: 100%;
+    padding: 15px 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
+
+  @media (max-width: 950px) {
+    .title{
+        font-size: 28.5px;
+    }
+
+    .InputsFormulario {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+
+    .names{
+        width: 97%;
+        padding: 7px;
+        font-size: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+    }
+
+    .emailMensaje textarea{
+        padding: 7px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+        width: 97%;
+        height: 100%;
+        resize: none;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .container{
+        width: 90%;
+    }
+    .title{
+        font-size: 27px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .container{
+        width: 95%;
+    }
+
+    .title{
+        font-size: 24px;
+    }
+    .guia{
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+    }
+    
+    .select{
+        width: 100%;
+        padding: 7px 0px;
+        font-size: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.2);  
+        background-color: transparent;
+        word-break: break-all;
+    }
+    
+    .InputsFormulario {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+
+    .names{
+        width: 97%;
+        padding: 7px;
+        font-size: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+    }
+
+    .emailMensaje textarea{
+        padding: 7px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+        width: 97%;
+        height: 100%;
+        resize: none;
+    }
+
+    .button {
+        width: 60%;
+      }
+
+    .button2 {
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
