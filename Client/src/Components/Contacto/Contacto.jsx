@@ -56,31 +56,40 @@ function Contacto() {
   }
   return (
     <div className={style.container}>
-      <p className={style.title}>CONTACTO</p>
-      <p className={style.guia}>|| Envia tu consulta o accede al formulario para trabajar con nosotros</p>
-      <form>
-        <select onChange={handleMotivoChange} className={style.select}>
-            <option disabled selected>Motivo</option>
-            <option value="Consulta">Consulta</option>
-            <option value="Trabaja">Trabaja con nosotros</option>
-        </select>
-        {showButton ? <div><button className={style.button}>ACCEDE AL FORMULARIO</button></div> :
+
+      <div className={style.MotivoContainer}>
+          <h3 className={style.title}>CONTÁCTENOS</h3>
+          <p className={style.guia}>Envia tu consulta o accede al formulario para trabajar con nosotros</p>
+          <select onChange={handleMotivoChange} className={style.select}>
+              <option disabled selected>¿En qué te podemos ayudar?</option>
+              <option value="Consulta">Consulta/Queja</option>
+              <option value="Trabaja">Trabaja con nosotros</option>
+          </select>
+      </div>
+
+      <form className={style.Formulario} >
+        {showButton ? 
         <div>
-          <div>
+          
+          <button className={style.button2}>COMPLETA NUESTRO FORMULARIO</button>
+        </div> 
+        
+        :
+        
+        <div className={style.InputsFormulario}>
             <div className={style.namesContainer}>
-            <input type="text" name="name" value={input.name} placeholder="Nombre" onChange={handleInputChange} className={style.names}></input>
-            {errors.name && <label className={style.error}>{errors.name}</label>}
-            <input type="text" name="lastName" value={input.lastName} placeholder="Apellido" onChange={handleInputChange} className={style.names}></input>
-            {errors.lastName && <label className={style.error}>{errors.lastName}</label>}
+              <input type="text" name="name" value={input.name} placeholder="Nombre" onChange={handleInputChange} className={style.names}></input>
+              {errors.name && <label className={style.error}>{errors.name}</label>}
+              <input type="text" name="lastName" value={input.lastName} placeholder="Apellido" onChange={handleInputChange} className={style.names}></input>
+              {errors.lastName && <label className={style.error}>{errors.lastName}</label>}
+              <input type="text" name="email" value={input.email} placeholder="Email" onChange={handleInputChange} className={style.names}></input>
+              {errors.email && <label className={style.error}>{errors.email}</label>}
             </div>
-          </div>
-          <div className={style.emailMensaje}>
-            <input type="text" name="email" value={input.email} placeholder="Email" onChange={handleInputChange} className={style.email}></input>
-            {errors.email && <label className={style.error}>{errors.email}</label>}
-            <textarea name="message" value={input.message} placeholder="Mensaje" onChange={handleInputChange} className={style.mensaje}></textarea>
-            {errors.message && <label className={style.error}>{errors.message}</label>}
-          </div>
-          {!errors.name && !errors.lastName && !errors.email && !errors.message && <button onClick={handleSubmit}>Enviar</button>}
+            <div className={style.emailMensaje}>
+              <textarea name="message" value={input.message} placeholder="Mensaje" onChange={handleInputChange} className={style.mensaje}></textarea>
+              {errors.message && <label className={style.error}>{errors.message}</label>}
+            </div>
+            {!errors.name && !errors.lastName && !errors.email && !errors.message && <button onClick={handleSubmit} className={style.button}>ENVIAR</button>}
         </div>
           }
       </form>

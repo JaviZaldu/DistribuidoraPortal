@@ -1,8 +1,8 @@
 .container{
     padding-top: 5%;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-bottom: 3%;
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 5%;
 }
 .mapa{
     width: 100%;
