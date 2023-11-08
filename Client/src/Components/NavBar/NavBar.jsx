@@ -10,7 +10,6 @@ function Navbar() {
 
   // Menu desplegable
   const [anchoPantalla, setAnchoPantalla] = useState(window.innerWidth);
-  const [showMenu, setShowMenu] = useState(false);
 
   const actualizarAnchoPantalla = () => {
     setAnchoPantalla(window.innerWidth);
@@ -24,12 +23,6 @@ function Navbar() {
       window.removeEventListener('resize', actualizarAnchoPantalla);
     };
   }, []);
-
-  const handleShowMenu = (e) => {
-    e.preventDefault();
-    console.log('handleShowMenu ejecutado');
-    setShowMenu(!showMenu);
-  };
 
   // Scrolls
   const controls = useAnimation();
@@ -85,7 +78,7 @@ function Navbar() {
 
   return (
     <div >
-      {anchoPantalla > 800 ? (
+      {anchoPantalla > 1000 ? (
         <div className={`${styles.navbar} ${navbarFixed ? styles.fixedNavbar : ''}`}>
         <a href="/"><img className={styles.logo} src={LogoHorizontal} alt="logo" /></a>
           <div className={styles.sections}>

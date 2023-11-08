@@ -2,8 +2,9 @@ import style from "./Contacto.module.css"
 import { useState } from "react";
 import {validate} from "./formValidator.js"
 import { useDispatch } from "react-redux";
-import { sendEmail } from "../../Redux/Actions";
-
+import { sendEmail, clearAux } from "../../Redux/Actions";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contacto() {
   const [showButton, setShowButton] = useState(false);
@@ -50,7 +51,14 @@ function Contacto() {
         lastName:"",
         email:"",
         message:""
-      })
+      });
+      toast.success("¡Gracias por tu consulta! Te responderemos a la brevedad.", {
+        position: "top-center",
+        autoClose: 2000,
+        onClose:()=>{
+          dispatch(clearAux())
+        }
+      });
     }
     
   }
@@ -93,6 +101,7 @@ function Contacto() {
         </div>
           }
       </form>
+      <ToastContainer />
     </div>
   );
 }
