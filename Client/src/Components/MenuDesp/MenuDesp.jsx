@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 
-
-import styles from "./MenuDesp.module.css"
-
 const menuStyles = {
   bmBurgerButton: {
     position: 'fixed',
     width: '36px',
     height: '30px',
-    right:'10px',
+    right:'20px',
     top: '40px',
+  },
+  bmOverlay: {
+    background: "transparent",
   },
   bmBurgerBars: {
     background: '#204796',
@@ -50,10 +50,10 @@ const MenuDesp = ({scrollToInicio,scrollToContacto,scrollToNosotros,scrollToSucu
 
   return (
     <Menu styles={menuStyles} width={'50%'} right isOpen={isMenuOpen} onStateChange={handleMenuStateChange}>
-      <p className={styles.menuItem} onClick={() => { scrollToInicio(); closeMenu(); }}>Inicio</p>
-      <p className={styles.menuItem} onClick={() => { scrollToNosotros(); closeMenu(); }}>Nosotros</p>
-      <p className={styles.menuItem} onClick={() => { scrollToSucursales(); closeMenu(); }}>Sucursales</p>
-      <p className={styles.menuItem} onClick={() => { scrollToContacto(); closeMenu(); }}>Contacto</p>
+      <p onClick={() => { scrollToInicio(); closeMenu(); }}>Inicio</p>
+      <p onClick={() => { scrollToNosotros(); closeMenu(); }}>Nosotros</p>
+      <p onClick={() => { scrollToSucursales(); closeMenu(); }}>Sucursales</p>
+      <p onClick={() => { scrollToContacto(); closeMenu(); }}>Contacto</p>
     </Menu>
   );
 };

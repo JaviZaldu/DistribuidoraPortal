@@ -1,5 +1,5 @@
-import LogoIG from "../../Assets/Logos/LogoIGoriginal.png"
-import LogoFB from "../../Assets/Logos/LogofbOriginal.png"
+import LogoIG from "../../Assets/Logos/LogoIg.png"
+import LogoFB from "../../Assets/Logos/Logofb.png"
 import styles from "./Footer.module.css"
 function Footer() {
   return (
@@ -11,8 +11,8 @@ function Footer() {
           <p className={styles.text}>CP:4000</p>
         </div>
         <div>
-          <a href="https://instagram.com/portal.distribuidorasrl?igshid=NTc4MTIwNjQ2YQ==" target="_blank" ><img src={LogoIG} alt="" className={styles.logos}></img></a>
-          <a href="https://www.facebook.com/portal.distribuidorasrl" target="_blank" ><img src={LogoFB} alt="" className={styles.logos}></img></a>
+          <a href="https://instagram.com/portal.distribuidorasrl?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noreferrer"><img src={LogoIG} alt="" className={styles.logos}></img></a>
+          <a href="https://www.facebook.com/portal.distribuidorasrl" target="_blank" rel="noreferrer"><img src={LogoFB} alt="" className={styles.logos}></img></a>
         </div>
         <div>
           <p className={styles.text}>Email: contacto@distribuidoraportal.com</p>
@@ -22,7 +22,6 @@ function Footer() {
       <div>
         <p className={styles.text}>Derechos reservados ©-2023-Distribuidora Portal</p>
       </div>
-      
     </div>
   );
 }
