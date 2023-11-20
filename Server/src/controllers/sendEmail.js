@@ -17,8 +17,8 @@ const sendEmail = async (req, res) => {
         },
       });
       const mailOptions = {
-        from: "distribuidoraportal.mkt@gmail.com", // Remitente
-        to: "distribuidoraportal.mkt@gmail.com", // Destinatario
+        from: correo, // Remitente
+        to: correo, // Destinatario
         subject: `Contacto desde Web: ${subject}`, // Asunto
         text: `            
                     Nombre: ${name}
