@@ -6,16 +6,13 @@ export const CLEAR_AUX = "CLEAR_AUX";
 export function sendEmail(subject, name, lastName, email, message) {
   return async function (dispatch) {
     try {
-      const response = await axios.post(
-        "/portaldistribuidora/email",
-        {
-          subject,
-          name,
-          lastName,
-          email,
-          message,
-        }
-      );
+      const response = await axios.post("/portaldistribuidora/email", {
+        subject,
+        name,
+        lastName,
+        email,
+        message,
+      });
       return dispatch({
         type: SEND_EMAIL,
         payload: response.data,
