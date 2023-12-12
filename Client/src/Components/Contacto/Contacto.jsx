@@ -60,8 +60,12 @@ function Contacto() {
         }
       });
     }
-    
   }
+
+  const handleFormButtonClick = () => {
+    window.open("https://forms.gle/HnP8PoWEvYxkE4nM7", "_blank");
+  };
+
   return (
 
     <div className={style.container} id="contacto">
@@ -79,7 +83,7 @@ function Contacto() {
       <form className={style.Formulario} >
         {showButton ? 
         <div>
-          <button className={style.button2}>COMPLETA NUESTRO FORMULARIO</button>
+          <button className={style.button2} onClick={handleFormButtonClick}>COMPLETA NUESTRO FORMULARIO</button>
         </div> 
         
         :
